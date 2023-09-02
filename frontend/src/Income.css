@@ -1,0 +1,78 @@
+.income-header {
+    width: 96%;
+    height: 50px;
+    background-color: whitesmoke;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    color: green;
+    padding-top: 10px;
+}
+.income-input-container{
+    display: block;
+    width: 23vw;
+    padding-right: 10px;
+}
+.income-input{
+    border: transparent;
+    height: 50px;
+    width: 100%;
+    margin: 15px;
+    background-color: whitesmoke;
+}
+.income-input:nth-child(3) {
+   margin-right: 0px;
+   width: 40%;
+}
+.reference{
+    margin: 15px;
+    height: 100px;
+    border: 2px solid whitesmoke;
+    width: 90%;
+    background-color: whitesmoke;
+}
+.income-display{
+    width: 45vw;
+    height: 50px;
+}
+.overall-container{
+    display: flex;
+}
+.income-input:focus, .reference:focus{
+    outline: rgb(0, 0, 0);
+}
+.income-btn{
+    padding: 10px;
+    margin-left: 12px;
+    background-color: green;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+.income-btn:active{
+    background-color: whitesmoke;
+}
+.expense-btn {
+    padding: 10px;
+    margin-left: 12px;
+    background-color: red;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+.expense-btn:active {
+    background-color: whitesmoke;
+}
+.response{
+    font-size: 14px;
+    padding-left: 15px;
+    color: rgb(143, 191, 143);
+}
+.expense-response {
+    font-size: 14px;
+    padding-left: 15px;
+    color: rgb(191, 139, 139);
+}

@@ -1,0 +1,42 @@
+.display-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    margin: 15px;
+    border-radius: 10px;
+}
+.display-icon{
+    width: 5%;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.info-container{
+    display: block;
+    width: 90%;
+    text-align: left;
+}
+.otherinfo-container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.info-name{
+    margin-left: 10px;
+    display: flex;
+        justify-content: left;
+        align-items: center;
+}
+.info{
+    margin:10px;
+    font-size: 12px;
+}
+.display-delete{
+    width: 5%;
+    margin-top: 10px;
+    border: none;
+}
+.display-delete:active{
+    border: none;
+    transform: scale(1.1);
+}
