@@ -21,6 +21,8 @@
     width: 100%;
     margin: 15px;
     background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 5px;
 }
 .income-input:nth-child(3) {
    margin-right: 0px;
@@ -75,4 +77,36 @@
     font-size: 14px;
     padding-left: 15px;
     color: rgb(191, 139, 139);
+}
+
+@media screen and (max-width: 900px){
+    .income-container{
+        display: block;
+    }
+    .overall-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .income-input-container {
+        width: 90vw;
+    }
+    .income-display {
+        width: 75vw;
+        height: 50px;
+    }
+    .income-input{
+        margin: 5px;
+    }
+        .income-header {
+            margin: 10px;
+        }
+        .reference {
+            margin: 5px;
+        }
+}
+@media screen and (max-width: 900px) {
+    .income-header{
+        font-weight: bold;
+        font-size: 24px;
+    }
 }

@@ -50,7 +50,7 @@ const Income = (props) => {
     }
 
     return (
-        <div style={{display: 'block'}}>
+        <div className='income-container'>
             <div className="income-header">
                 ${props.totalincome}
             </div>

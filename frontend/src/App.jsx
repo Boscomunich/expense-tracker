@@ -79,7 +79,7 @@ class App extends Component {
         <Routes>
           <Route element={<Protected route={this.state.route}/>}>
             <Route path='/' element={<Home routeChange={this.routeChange} username={this.state.username}/>}>
-              <Route index element={<Dashboard totalincome={this.state.totalincome} totalexpense={this.state.totalexpense} expense={this.state.expense} income={this.state.income}/>}/>
+              <Route index element={<Dashboard totalincome={this.state.totalincome} totalexpense={this.state.totalexpense} expense={this.state.expense} income={this.state.income} routeChange={this.routeChange}/>}/>
               <Route path='/income' element={<Income token={this.state.token} totalincome={this.state.totalincome} income={this.state.income} getIncome={this.getIncome}/>}/>
               <Route path='/expense' element={<Expense token={this.state.token} totalexpense={this.state.totalexpense} expense={this.state.expense} getExpense={this.getExpense}/>}/>
             </Route>

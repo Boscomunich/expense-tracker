@@ -1,12 +1,16 @@
 import './Dashboard.css'
 import { useState, useEffect } from 'react';
 import { LineChart, Line, Tooltip, CartesianGrid, YAxis, XAxis, Legend, ResponsiveContainer } from 'recharts';
+import { FaPlus, FaMinus } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
-const Dashboard = ({totalincome, totalexpense, expense, income}) => {
+const Dashboard = ({totalincome, totalexpense, expense, income, routeChange}) => {
     //app state
     const[balance, setbalance] = useState('')
     const[recent, setrecent] = useState([])
     const[changeChart, setchangeChart] = useState('income')
+    const [isOpen, setIsOpen] = useState(false);
+
     //combine income and expense array to get the latest data to update recent history in the ui
     const recentHistory = () => {
         const history = expense.concat(income)
@@ -25,8 +29,32 @@ const Dashboard = ({totalincome, totalexpense, expense, income}) => {
         recentHistory()
     }, [expense, income])
 
+    const minIncome = Math.min(...income.map(item => item?.amount ))
+    const maxIncome = Math.max(...income.map(item => item?.amount ))
+
+    const minExpense = Math.min(...expense.map(item => item?.amount ))
+    const maxExpense = Math.max(...expense.map(item => item?.amount ))
+        
+    const handleClick = () => {
+    setIsOpen(!isOpen);
+    };
+
     return (
         <>
+        <div className="floating-button">
+            <button onClick={handleClick}>
+            {isOpen ? <FaMinus className='react-icons' /> : <FaPlus className='react-icons' />}
+            </button>
+            {isOpen && (
+            <div className="content">
+                <NavLink to='/' style={{textDecoration: 'none'}}><div>Dashboard</div></NavLink>
+                <NavLink to='/income' style={{textDecoration: 'none'}}><div>Income</div></NavLink>
+                <NavLink to='/expense' style={{textDecoration: 'none'}}><div>Expense</div></NavLink>
+                <div
+                onClick={()=>routeChange('')}>Logout</div>
+            </div>
+            )}
+        </div>
             <div className='main-container'>
                 <div className="dashboard-main-div">
                     {/*changes graph between income graph and expense graph*/}
@@ -120,22 +148,22 @@ const Dashboard = ({totalincome, totalexpense, expense, income}) => {
                     <div className='min-max'>
                         <div>
                             <label>Min Income</label><br/>
-                            <div style={{color:'green'}}>{Math.min(...income.map(item => item.amount))}</div>
+                            <div style={{color:'green'}}>{minIncome == Infinity? 0 : minIncome}</div>
                         </div>
                         <div>
                             <label>Max Income</label><br/>
-                            <div style={{color:'green'}}>{Math.max(...income.map(item => item.amount))}</div>
+                            <div style={{color:'green'}}>{maxIncome == -Infinity? 0 : maxIncome}</div>
                         </div>
                     </div>
                     <label>Expense</label>
                     <div className='min-max'>
                         <div>
                             <label>Min Expense</label><br/>
-                            <div style={{color:'red'}}>{Math.min(...expense.map(item => item.amount))}</div>
+                            <div style={{color:'red'}}>{minExpense == Infinity? 0 : minExpense}</div>
                         </div>
                         <div>
                             <label>Max Expense</label><br/>
-                            <div style={{color:'red'}}>{Math.max(...expense.map(item => item.amount))}</div>
+                            <div style={{color:'red'}}>{maxExpense == -Infinity? 0 : maxExpense}</div>
                         </div>
                     </div>
                 </div>

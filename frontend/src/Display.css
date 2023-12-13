@@ -5,6 +5,7 @@
     background-color: whitesmoke;
     margin: 15px;
     border-radius: 10px;
+    padding: px;
 }
 .display-icon{
     width: 5%;
@@ -39,4 +40,14 @@
 .display-delete:active{
     border: none;
     transform: scale(1.1);
+}
+@media screen and (max-width: 900px) {
+    .display-delete {
+            margin-right: 8px;
+        }
+        .display-icon {
+            width: 5%;
+            margin-top: 25px;
+            margin-left: 5px;
+        }
 }

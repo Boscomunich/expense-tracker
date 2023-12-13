@@ -91,3 +91,104 @@
 .dashboard-main-div button:active{
     transform: scale(1.1);
 }
+
+@media screen and (max-width: 900px) {
+    .main-container {
+            display: flex;
+            justify-content: space-between;
+            width: 98vw;
+            border: 2px solid whitesmoke;
+            margin: 0px;
+            border-radius: 0px;
+            font-family: Roboto, sans-serif;
+        }
+    .all-transaction {
+        height: 50vh;
+        width: 100%;
+        margin-left: 1.5vh;
+        border: 2px solid whitesmoke;
+        border-radius: 20px;
+        background-color: whitesmoke;
+    }
+        .dashboard-main-div {
+            display: block;
+            width: 50%;
+        }
+        .history {
+            width: 90%;
+            margin: 5%;
+            text-align: center;
+            font-weight: 400;
+        }
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    
+        .floating-button button {
+            background-color: blue;
+            border: none;
+            color: white;
+            padding: 2px 2px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 2px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    
+        .content div {
+            background-color: #f1f1f1;
+            width: 100px;
+            border: none;
+            padding: 5px;
+            margin: 10px 0;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+}
+@media screen and (max-width: 640px) {
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid whitesmoke;
+            border-radius: 0px;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+        }
+        .all-transaction {
+            height: 50vh;
+            width: 90%;
+            align-self: center;
+            margin-left: 5%;
+            border: 2px solid whitesmoke;
+            border-radius: 20px;
+            background-color: whitesmoke;
+        }
+        .dashboard-main-div {
+        display: block;
+        width: 100%;
+    }
+        .revenue {
+            font-size:px ;
+        }
+        .history {
+            width: 90%;
+            margin: 5%;
+            text-align: center;
+            font-weight: 400;
+        }
+        .recent-history {
+            height: 10vh;
+        }
+        .min-max {
+            height: 10vh;
+        }
+        .navbar {
+            left: 0;
+        }
+}

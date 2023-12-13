@@ -4,7 +4,7 @@
     box-sizing: border-box;
     list-style: none;
     background-color: rgb(139, 96, 128);
-    font-family: sans-serif;
+    font-family: Roboto,sans-serif,
 }
 .home{
     display: flex;
@@ -33,6 +33,9 @@
 .react-icons{
     font-size: 20px;
 }
+.react-icon {
+    font-size: 10px;
+}
 .sign-out{
     display: flex;
     column-gap: 5px;
@@ -44,4 +47,42 @@
 }
 .sign-out:active{
     transform: scale(1.1);
+}
+.floating-button{
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+.dashboard-container{
+    display: none;
+}
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: block;
+}
+
+.floating-button button {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.content div {
+    background-color: #f1f1f1;
+    width: 100px;
+    border: none;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 20px;
+    font-weight: bold;
+}
 }
