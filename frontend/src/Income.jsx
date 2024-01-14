@@ -15,7 +15,7 @@ const Income = (props) => {
 
     const deleteIncome = (id) => {
         try { 
-        fetch(`http://localhost:5000/api/v1/income/${id}`,{
+        fetch(`https://transaction-api-3caf.onrender.com/api/v1/income/${id}`,{
             method: 'delete',
             headers:{'content-type': 'application/json',
             'authorization': `Bearer ${token}`},
@@ -31,7 +31,7 @@ const Income = (props) => {
     async function addIncome () {
         try {
         const res = await 
-        fetch('http://localhost:5000/api/v1/income',{
+        fetch('https://transaction-api-3caf.onrender.com/api/v1/income',{
             method: 'post',
             headers:{'content-type': 'application/json',
             'authorization': `Bearer ${token}`},

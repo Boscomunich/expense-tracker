@@ -15,7 +15,7 @@ const Expense = (props) => {
 
     const deleteExpense = (id) => {
         try { 
-        fetch(`http://localhost:5000/api/v2/expense/${id}`,{
+        fetch(`https://transaction-api-3caf.onrender.com/api/v2/expense/${id}`,{
             method: 'delete',
             headers:{'content-type': 'application/json',
             'authorization': `Bearer ${token}`},
@@ -31,7 +31,7 @@ const Expense = (props) => {
     async function addExpense () {
         try {
         const res = await 
-        fetch('http://localhost:5000/api/v2/expense',{
+        fetch('https://transaction-api-3caf.onrender.com/api/v2/expense',{
             method: 'post',
             headers:{'content-type': 'application/json',
             'authorization': `Bearer ${token}`},

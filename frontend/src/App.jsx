@@ -36,7 +36,7 @@ class App extends Component {
   }
 
   getExpense = () => {
-  fetch('http://localhost:5000/api/v2/expense',{
+  fetch('https://transaction-api-3caf.onrender.com/api/v2/expense',{
             method: 'get',
             headers:{'content-type': 'application/json',
             'authorization': `Bearer ${this.state.token}`}
@@ -45,7 +45,7 @@ class App extends Component {
             .then(response => this.setState({expense:response}))
           }
   getIncome = () => {
-    fetch('http://localhost:5000/api/v1/income',{
+    fetch('https://transaction-api-3caf.onrender.com/api/v1/income',{
             method: 'get',
             headers:{'content-type': 'application/json',
             'authorization': `Bearer ${this.state.token}`}

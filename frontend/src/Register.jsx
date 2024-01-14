@@ -12,7 +12,7 @@ const Register = (props) => {
     async function onSubmitRegister() {
         try {
         const res = await
-        fetch('http://localhost:5000/api/v3/user/register', {
+        fetch('https://transaction-api-3caf.onrender.com/v3/user/register', {
         method: 'post',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify({
