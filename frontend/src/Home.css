@@ -8,13 +8,14 @@
 }
 .home{
     display: flex;
+    gap: 2.5vw;
     
 }
 .dashboard-container{
     border: 5px solid whitesmoke;
     width: 25vw;
-    height:90vh;
-    margin:2.5vh ;
+    height:95vh;
+    margin:10px ;
     text-align: center;
     padding-top: 10vh;
     border-radius: 20px;
