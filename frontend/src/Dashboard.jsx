@@ -53,7 +53,7 @@ const Dashboard = ({totalincome, totalexpense, expense, income, routeChange}) =>
                 <div
                 onClick={()=>routeChange('')}>Logout</div>
             </div>
-            )}
+            )} 
         </div>
             <div className='main-container'>
                 <div className="dashboard-main-div">
